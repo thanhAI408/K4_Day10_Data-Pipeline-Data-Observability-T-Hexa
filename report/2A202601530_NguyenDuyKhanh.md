@@ -125,30 +125,29 @@ Nếu tiếp tục xử lý blocker:
 
 ### Metrics chính
 
-Evaluation set có 9 samples; Ragas được bỏ qua theo cấu hình `RUN_RAGAS` mặc định.
-Các metrics dưới đây chỉ là bằng chứng runtime để kiểm tra output của hai module observability/reporting, không phải phần việc sở hữu thêm.
+Các metrics dưới đây là kết quả tổng hợp của nhóm, được dùng làm bằng chứng runtime để kiểm tra output của hai module observability/reporting, không phải phần việc sở hữu thêm.
 
 | Metric/signal | Baseline | Corrupted | Repaired | Nhận xét của cá nhân |
 | --- | ---: | ---: | ---: | --- |
-| `retrieval_hit_rate` | 1.0000 | 0.6667 | 1.0000 | Giảm 0.3333 khi corruption, phục hồi hoàn toàn sau repair |
-| `mean_token_f1` | 1.0000 | 0.5795 | 1.0000 | Giảm 0.4205, sau repair trở về baseline |
-| `judge_accuracy` | 1.0000 | 0.5556 | 1.0000 | Giảm 0.4444, sau repair trở về baseline |
-| `mean_judge_score` | 5.0000 | 3.2222 | 5.0000 | Giảm 1.7778, sau repair trở về baseline |
-| Quality checks | PASS | FAIL | PASS | Corruption tạo duplicate, summary rỗng và stale row; repair khôi phục |
-| Freshness status | FRESH | STALE | FRESH | `stale_rows`: 0 → 1 → 0 |
+| `retrieval_hit_rate` | 1.0000 | 0.3333 | 1.0000 | bằng chứng cho việc tín hiệu dữ liệu xấu kéo giảm coverage; comparison report ghi nhận recovery hoàn toàn |
+| `mean_token_f1` | 0.7687 | 0.2628 | 0.7687 | Delta 0.5059 cho thấy summary/context bị hỏng ảnh hưởng trực tiếp đến độ trùng khớp câu trả lời; repaired trở về baseline |
+| `judge_accuracy` | 0.6667 | 0.4444 | 0.6667 | giảm 0.2222; quality status trong report giúp giải thích metric giảm |
+| `mean_judge_score` | 3.8889 | 2.8889 | 3.8889 | -1 là tín hiệu answer quality giảm; repair recovery được thể hiện cùng các quality/freshness checks |
+| Quality checks | OK | FAILED | OK | phát hiện duplicate, missing/short summary và stale rows, sau đó render trạng thái trong report |
+| Freshness | FRESH | NOT FRESH | FRESH | 2 stale rows sau corruption và xác nhận dữ liệu trở lại FRESH sau repair |
 
 ### Kết luận từ số liệu
 
-Các chuỗi nguyên nhân–bằng chứng sau được hỗ trợ bởi artifact runtime:
+Các chuỗi nguyên nhân–bằng chứng sau được hỗ trợ bởi kết quả runtime do nhóm cung cấp:
 
-1. Corruption log ghi nhận xóa 3 latest records, blank summary, noise, truncate title, stale date và duplicate row → quality chuyển FAIL, freshness chuyển STALE → retrieval hit rate giảm 1.0000 xuống 0.6667 và token F1 giảm xuống 0.5795.
-2. Repair lại từ raw source → dataset trở về 24 dòng, quality/freshness trở lại PASS/FRESH → các metric evaluation trở về đúng baseline.
+1. Corruption làm quality chuyển từ `OK` sang `FAILED`, freshness từ `FRESH` sang `NOT FRESH`, retrieval hit rate giảm từ 1.0000 xuống 0.3333 và token F1 giảm từ 0.7687 xuống 0.2628.
+2. Repair lại từ raw source → quality/freshness trở về `OK/FRESH` và các metric evaluation trở về đúng baseline.
 
-Không thể tách riêng đóng góp của từng corruption lên từng metric vì flow áp dụng các corruption trong cùng một lần chạy. Có thể xác nhận tổng hợp rằng corrupted dataset làm giảm chất lượng và repair khôi phục kết quả.
+Không thể tách riêng đóng góp của từng corruption lên từng metric vì flow áp dụng các corruption trong cùng một lần chạy. Theo phân tích của tôi, corrupted dataset làm giảm chất lượng agent và repair khôi phục kết quả.
 
-Comparison contract trong `reporting.py` đã được mở rộng để nhận baseline quality/freshness. `data/reports/corruption_report.md` xác nhận output runtime có đủ ba trạng thái.
+Comparison contract trong `reporting.py` đã được mở rộng để nhận baseline quality/freshness và hỗ trợ output đủ ba trạng thái.
 
-Các số liệu được đối chiếu từ `data/results/baseline_metrics.json`, `data/results/corrupted_metrics.json`, `data/results/repaired_metrics.json`, `data/quality/baseline_quality.json`, `data/quality/corrupted_quality.json`, `data/quality/repaired_quality.json` và `data/reports/corruption_report.md`.
+Các số liệu trong bảng là kết quả metrics đã được nhóm thống nhất; các artifact tương ứng nằm trong `data/results/`, `data/quality/` và `data/reports/` của nhóm.
 
 ## 9. Điều học được và hướng cải thiện
 

@@ -5,3 +5,9 @@ lab.txt
 src/*.egg-info/
 lab/
 **/__pycache__/
+
+.env
+.venv/
+.claude/
+**/__pycache__/
+*.pyc

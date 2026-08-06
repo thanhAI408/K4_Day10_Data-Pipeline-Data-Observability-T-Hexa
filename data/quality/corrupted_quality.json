@@ -1,0 +1,19 @@
+{
+  "report_name": "corrupted_quality",
+  "row_count": 22,
+  "paper_id_unique": false,
+  "duplicate_paper_ids": 2,
+  "missing_title": 0,
+  "missing_summary": 3,
+  "short_summary_count": 3,
+  "stale_rows": 2,
+  "freshness_threshold_days": 180,
+  "ok": false,
+  "failures": [
+    "2 duplicate paper_id values",
+    "3 rows missing summary",
+    "3 rows have summary shorter than 50 chars",
+    "2 rows exceed the freshness threshold of 180 days"
+  ],
+  "generated_at": "2026-08-06T08:26:57.553206+00:00"
+}

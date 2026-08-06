@@ -1,0 +1,27 @@
+{
+  "seed": 1337,
+  "operations": {
+    "dropped_latest": {
+      "count": 4,
+      "paper_ids": []
+    },
+    "blanked_summary": {
+      "count": 3
+    },
+    "noisy_summary": {
+      "count": 3
+    },
+    "truncated_title": {
+      "count": 2
+    },
+    "stale_dates": {
+      "count": 2,
+      "shift_days": -730
+    },
+    "duplicates": {
+      "count": 2
+    }
+  },
+  "final_row_count": 22,
+  "baseline_row_count": 24
+}

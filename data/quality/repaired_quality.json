@@ -1,0 +1,14 @@
+{
+  "report_name": "repaired_quality",
+  "row_count": 24,
+  "paper_id_unique": true,
+  "duplicate_paper_ids": 0,
+  "missing_title": 0,
+  "missing_summary": 0,
+  "short_summary_count": 0,
+  "stale_rows": 0,
+  "freshness_threshold_days": 180,
+  "ok": true,
+  "failures": [],
+  "generated_at": "2026-08-06T08:26:58.353426+00:00"
+}

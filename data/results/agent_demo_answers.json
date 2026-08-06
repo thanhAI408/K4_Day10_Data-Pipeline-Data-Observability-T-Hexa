@@ -1,0 +1,4 @@
+{
+  "skipped": "GOOGLE_API_KEY is required when LLM_PROVIDER=gemini.",
+  "provider": "gemini"
+}

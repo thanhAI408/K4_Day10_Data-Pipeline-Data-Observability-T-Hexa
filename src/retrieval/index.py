@@ -135,7 +135,11 @@ class LocalEmbeddingIndex:
             settings=settings,
             collection_name=payload["collection_name"],
             documents=payload["documents"],
-            persist_path=Path(payload["persist_path"]),
+            # Always resolve against the local settings, not the manifest's
+            # stored persist_path: build() writes an absolute path from the
+            # machine that built the index, which is not portable across
+            # checkouts/machines.
+            persist_path=settings.paths.chroma_dir,
         )
 
     def search(self, query: str, top_k: int | None = None) -> list[SearchResult]:

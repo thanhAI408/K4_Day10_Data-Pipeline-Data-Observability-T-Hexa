@@ -23,9 +23,9 @@
     "retrieval_hit": true,
     "token_f1": 0.3116883116883117,
     "judge": {
-      "score": 1,
+      "score": 2,
       "correct": false,
-      "reasoning": "Fallback heuristic judge used because the LLM evaluator was unavailable."
+      "reasoning": "The model answer only provides the initial sentence of the reference answer and fails to summarize the key components of the SafeRAG framework, its methodology, and the evaluation results. It lacks detail and does not convey the full scope of the paper."
     }
   },
   {
@@ -54,7 +54,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "Fallback heuristic judge used because the LLM evaluator was unavailable."
+      "reasoning": "The model answer matches the reference answer exactly, providing all the authors' names in the correct order."
     }
   },
   {
@@ -83,7 +83,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "Fallback heuristic judge used because the LLM evaluator was unavailable."
+      "reasoning": "The model answer matches the reference answer exactly, providing the correct publication date."
     }
   },
   {
@@ -112,7 +112,7 @@
     "judge": {
       "score": 1,
       "correct": false,
-      "reasoning": "Fallback heuristic judge used because the LLM evaluator was unavailable."
+      "reasoning": "The model answer only provides the introductory sentence of the reference answer and fails to summarize the key findings, methodology, and results of the study, which are essential for a complete summary."
     }
   },
   {
@@ -141,7 +141,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "Fallback heuristic judge used because the LLM evaluator was unavailable."
+      "reasoning": "The model answer matches the reference answer exactly, listing all authors in the same order without any discrepancies."
     }
   },
   {
@@ -170,7 +170,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "Fallback heuristic judge used because the LLM evaluator was unavailable."
+      "reasoning": "The model answer matches the reference answer exactly, indicating it is materially correct."
     }
   },
   {
@@ -197,9 +197,9 @@
     "retrieval_hit": true,
     "token_f1": 0.3188405797101449,
     "judge": {
-      "score": 1,
+      "score": 2,
       "correct": false,
-      "reasoning": "Fallback heuristic judge used because the LLM evaluator was unavailable."
+      "reasoning": "The model answer provides only the introductory context of the paper but fails to summarize the key findings, methodology, and results presented in the reference answer. It lacks details about the specific framework (CM-RAF-Lag-Llama), the validation process, and the performance metrics, which are crucial for a comprehensive summary."
     }
   },
   {
@@ -228,7 +228,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "Fallback heuristic judge used because the LLM evaluator was unavailable."
+      "reasoning": "The model answer matches the reference answer exactly, providing the correct authors of the work."
     }
   },
   {
@@ -257,7 +257,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "Fallback heuristic judge used because the LLM evaluator was unavailable."
+      "reasoning": "The model answer matches the reference answer exactly, indicating it is materially correct."
     }
   },
   {
@@ -284,9 +284,9 @@
     "retrieval_hit": true,
     "token_f1": 0.2424242424242424,
     "judge": {
-      "score": 1,
+      "score": 2,
       "correct": false,
-      "reasoning": "Fallback heuristic judge used because the LLM evaluator was unavailable."
+      "reasoning": "The model answer only provides a partial summary of the background section and does not address the objective, methods, results, or conclusions of the paper. It lacks critical information about the study's purpose, methodology, and findings, which are essential for a comprehensive summary."
     }
   },
   {
@@ -315,7 +315,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "Fallback heuristic judge used because the LLM evaluator was unavailable."
+      "reasoning": "The model answer matches the reference answer exactly, providing the correct authors of the paper."
     }
   },
   {
@@ -344,7 +344,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "Fallback heuristic judge used because the LLM evaluator was unavailable."
+      "reasoning": "The model answer matches the reference answer exactly, indicating it is materially correct."
     }
   },
   {
@@ -373,7 +373,7 @@
     "judge": {
       "score": 1,
       "correct": false,
-      "reasoning": "Fallback heuristic judge used because the LLM evaluator was unavailable."
+      "reasoning": "The model answer only provides the introductory context of the reference answer and fails to summarize the key components, findings, and implications of the study. It lacks details about the AI framework, its evaluation, and the results, making it an incomplete and inadequate summary."
     }
   },
   {
@@ -402,7 +402,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "Fallback heuristic judge used because the LLM evaluator was unavailable."
+      "reasoning": "The model answer matches the reference answer exactly, providing the correct authors of the work."
     }
   },
   {
@@ -431,7 +431,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "Fallback heuristic judge used because the LLM evaluator was unavailable."
+      "reasoning": "The model answer matches the reference answer exactly, providing the correct publication date."
     }
   },
   {
@@ -458,9 +458,9 @@
     "retrieval_hit": true,
     "token_f1": 0.56,
     "judge": {
-      "score": 3,
-      "correct": true,
-      "reasoning": "Fallback heuristic judge used because the LLM evaluator was unavailable."
+      "score": 2,
+      "correct": false,
+      "reasoning": "The model answer only partially summarizes the reference answer, capturing the initial part about the US Army Corps of Engineers' mission but omitting key details about their R&D programs, strategic focus areas, and the types of information generated. It lacks the comprehensive overview provided in the reference."
     }
   },
   {
@@ -489,7 +489,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "Fallback heuristic judge used because the LLM evaluator was unavailable."
+      "reasoning": "The model answer matches the reference answer exactly, providing the same names in the same order."
     }
   },
   {
@@ -518,7 +518,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "Fallback heuristic judge used because the LLM evaluator was unavailable."
+      "reasoning": "The model answer matches the reference answer exactly, indicating it is materially correct."
     }
   }
 ]

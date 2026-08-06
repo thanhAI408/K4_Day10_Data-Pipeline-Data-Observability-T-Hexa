@@ -7,8 +7,8 @@
 | `samples` | 18 | 18 | +0.0000 | 18 | +0.0000 |
 | `retrieval_hit_rate` | 1.0000 | 0.3333 | -0.6667 | 1.0000 | +0.0000 |
 | `mean_token_f1` | 0.7687 | 0.2628 | -0.5059 | 0.7687 | +0.0000 |
-| `judge_accuracy` | 0.7222 | 0.2778 | -0.4444 | 0.7222 | +0.0000 |
-| `mean_judge_score` | 3.7778 | 2 | -1.7778 | 3.7778 | +0.0000 |
+| `judge_accuracy` | 0.6667 | 0.4444 | -0.2222 | 0.6667 | +0.0000 |
+| `mean_judge_score` | 3.8889 | 2.8889 | -1.0000 | 3.8889 | +0.0000 |
 | `ragas` | skipped: Set RUN_RAGAS=1 to enable the slower Ragas pass. | skipped: Set RUN_RAGAS=1 to enable the slower Ragas pass. | n/a | skipped: Set RUN_RAGAS=1 to enable the slower Ragas pass. | n/a |
 
 ## Data quality

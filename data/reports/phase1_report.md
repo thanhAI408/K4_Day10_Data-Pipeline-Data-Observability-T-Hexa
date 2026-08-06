@@ -18,8 +18,8 @@
 | `samples` | 18 |
 | `retrieval_hit_rate` | 1.0000 |
 | `mean_token_f1` | 0.7687 |
-| `judge_accuracy` | 0.7222 |
-| `mean_judge_score` | 3.7778 |
+| `judge_accuracy` | 0.6667 |
+| `mean_judge_score` | 3.8889 |
 | `ragas` | skipped: Set RUN_RAGAS=1 to enable the slower Ragas pass. |
 
 ## Data quality
